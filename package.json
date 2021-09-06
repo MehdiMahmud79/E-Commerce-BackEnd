@@ -1,0 +1,21 @@
+{
+  "name": "e-commerece-back-end",
+  "version": "1.0.0",
+  "description": "Application to interact with a MySQL database Using Sequelize in ExpressJs.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node seeds/index.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MehdiMahmud79/E-Commerce-BackEnd.git"
+  },
+  "author": "MehdiMahmud79",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MehdiMahmud79/E-Commerce-BackEnd/issues"
+  },
+  "homepage": "https://github.com/MehdiMahmud79/E-Commerce-BackEnd#readme"
+}
