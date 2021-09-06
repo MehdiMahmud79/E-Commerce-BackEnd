@@ -16,11 +16,11 @@ Product.init(
       allowNull: false,
     },
     product_name: {
-      type: DataTypes.String,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     price: {
-      type: DataTypes.Decimal,
+      type: DataTypes.DECIMAL,
       allowNull: false,
       validate: {
         isDecimal: true,
