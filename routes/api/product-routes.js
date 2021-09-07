@@ -86,7 +86,7 @@ router.put("/:id", (req, res) => {
   })
     .then(() => {
       // find all associated tags from ProductTag
-      // Exaample of the request
+      // Example of the request
       // {
       //   "product_name": "Basketball",
       //   "price": 220.00,
