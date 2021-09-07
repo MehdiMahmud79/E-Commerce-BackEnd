@@ -62,13 +62,15 @@ npm i
   To use this app, you may need to run the following commands sequencially,
 
 ```bash
-mysql -u root -p
-=> source db/schema.sql;
-quit
+* mysql -u root -p
+* source db/schema.sql;
+* quit
 
-npm run dev
+* npm run seed
+
+* npm run dev
 or
-npm run start
+* npm run start
 ```
 
 
