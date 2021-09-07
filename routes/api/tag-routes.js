@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Tag, Product, ProductTag } = require('../../models');
+const { Tag, Product, Category, ProductTag } = require("../../models");
 
 // The `/api/tags` endpoint
 
@@ -11,6 +11,7 @@ router.get("/", async (req, res) => {
       include: [
         { model: Product, through: ProductTag, as: "productsWithThisTag" },
       ],
+      order: [["id", "ASC"]],
     });
     res.status(200).json(productDataAll);
   } catch (err) {
@@ -62,12 +63,12 @@ router.put("/:id", async (req, res) => {
       return;
     }
 
-    await Tag.update(req.body, {
-      where: {
-        id: req.params.id,
-      },
+    const productDataById = await Product.findByPk(req.params.id, {
+      include: [
+        { model: Category },
+        { model: Tag, through: ProductTag, as: "product_tags" },
+      ],
     });
-
     res.json(["The following Tag is updated:", tagDataById]);
   } catch (err) {
     console.log(err);

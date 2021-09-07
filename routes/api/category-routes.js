@@ -8,6 +8,7 @@ router.get("/", async (req, res) => {
   try {
     const categoryDataAll = await Category.findAll({
       include: [{ model: Product }],
+      order: [["id", "ASC"]],
     });
     res.status(200).json(categoryDataAll);
   } catch (err) {
@@ -58,7 +59,7 @@ router.put("/:id", async (req, res) => {
         id: req.params.id,
       },
     });
-    res.json(["The category is updated as follows:", categoryDataById]);
+    res.json(["The category is updated as follows:", categoryDataToUpdateById]);
   } catch (err) {
     res.status(400).json(err);
   }
