@@ -24,15 +24,11 @@ Internet retail, also known as **e-commerce**, is the largest sector of the elec
 ## 🚀
 ## Mock-Up
 
-The following image shows the test procedure by jest:
+The following animation show a mock-up of the app and functionality:
 
-![📹 Installation using command line.](./assets/install.gif)
 
-[📸 A gif animation of the app](./assets/screen.gif)
+![📸 A gif animation of the app](./assets/screen.gif)
 
-The following image shows a mock-up of the generated HTML’s appearance and functionality:
-
-![Test results using jest.](./assets/screen.gif)
 
 ### Youtube videos to demonstrate the project
 🔴📺
@@ -46,6 +42,7 @@ The following image shows a mock-up of the generated HTML’s appearance and fun
 ```bash
 npm i
 ```
+![📹 Installation using command line.](./assets/install.gif)
 
 ### this will install the following dependencies 
 ```bash
