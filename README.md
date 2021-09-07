@@ -26,9 +26,9 @@ Internet retail, also known as **e-commerce**, is the largest sector of the elec
 
 The following image shows the test procedure by jest:
 
-![📹 Test results using jest.](./assets/test.gif)
+![📹 Installation using command line.](./assets/install.gif)
 
-[📸 An image shows the test result](./dist/test.jpg)
+[📸 A gif animation of the app](./assets/screen.gif)
 
 The following image shows a mock-up of the generated HTML’s appearance and functionality:
 
@@ -37,9 +37,9 @@ The following image shows a mock-up of the generated HTML’s appearance and fun
 ### Youtube videos to demonstrate the project
 🔴📺
 
-* [📹 YouTube video for Testing the App.](https://youtu.be/72IMdktjbZk)
+* [📹 YouTube video for installing the app.](https://youtu.be/MN-CRUqIAGI)
 
-* [📹 YouTube video for App. functionality](https://youtu.be/O4aNoakMn0o)
+* [📹 YouTube video for App. functionality](https://youtu.be/7Pg9gin8lWo)
 
 ## 🛠️ 
 ##  Installation
@@ -52,9 +52,9 @@ npm i
   "dependencies": {
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "mysql2": "^2.1.0",
+    "mysql2": "^2.3.0",
     "nodemon": "^2.0.12",
-    "sequelize": "^5.21.7"
+    "sequelize": "^5.22.4"
   }
 
 ```
