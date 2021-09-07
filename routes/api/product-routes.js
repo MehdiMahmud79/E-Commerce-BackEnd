@@ -84,13 +84,22 @@ router.put("/:id", (req, res) => {
       id: req.params.id,
     },
   })
-    .then((product) => {
+    .then(() => {
       // find all associated tags from ProductTag
+      // Exaample of the request
+      // {
+      //   "product_name": "Basketball",
+      //   "price": 220.00,
+      //  "stock": 13,
+      //   "tagIds": [1, 2, 3, 4]
+      // }
       return ProductTag.findAll({ where: { product_id: req.params.id } });
     })
     .then((productTags) => {
       // get list of current tag_ids
       const productTagIds = productTags.map(({ tag_id }) => tag_id);
+      console.log("helloo  ", productTagIds);
+
       // create filtered list of new tag_ids
       const newProductTags = req.body.tagIds
         .filter((tag_id) => !productTagIds.includes(tag_id))
@@ -122,7 +131,7 @@ router.delete("/:id", async (req, res) => {
   // delete one product by its `id` value
 
   try {
-    const productDataToDeleteById = await Category.findByPk(req.params.id);
+    const productDataToDeleteById = await Product.findByPk(req.params.id);
     if (!productDataToDeleteById) {
       res.status(404).json({
         message: `No product found with id : ${req.params.id} to delete!`,
@@ -135,7 +144,7 @@ router.delete("/:id", async (req, res) => {
       },
     });
 
-    res.json(["The following category is deleted:", productDataToDeleteById]);
+    res.json(["The following Product is deleted:", productDataToDeleteById]);
   } catch (err) {
     res.status(500).json(err);
   }
